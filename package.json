@@ -1,0 +1,25 @@
+{
+  "name": "fullstackqa",
+  "version": "1.0.0",
+  "description": "testing",
+  "main": "index.js",
+  "scripts": {
+    "chrome:headless": "gherkin-testcafe chrome test/Test2.js --tags @smoke",
+    "edge": "gherkin-testcafe chrome:headless test/Test2.js",
+    "chrome": "gherkin-testcafe chrome ./stepDefs ./features/**/*.feature --tags @Smoke --reporter html:reports/htmlReports/report.html,list",
+    "test:dataDriven": "testcafe chrome test/dataDriven/*.js --skip-js-errors"
+  },
+  "author": "fullstack",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^10.7.0",
+    "@cucumber/cucumber-expressions": "17.1.0",
+    "cucumber-html-reporter": "^2.0.3",
+    "gherkin-testcafe": "7.2.0",
+    "node-xlsx": "^0.21.0",
+    "testcafe": "^3.5.0",
+    "testcafe-blink-diff": "^0.5.4",
+    "testcafe-reporter-html": "^1.4.6",
+    "testcafe-reporter-list": "^2.2.0"
+  }
+}
